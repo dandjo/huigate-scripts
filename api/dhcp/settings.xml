@@ -1,0 +1,17 @@
+<xml>
+    <uri>/api/dhcp/settings</uri>
+    <request>
+        <DhcpIPAddress>10.0.0.1</DhcpIPAddress>
+        <DhcpLanNetmask>255.255.0.0</DhcpLanNetmask>
+        <DhcpStatus>1</DhcpStatus>
+        <DhcpStartIPAddress>10.0.0.1</DhcpStartIPAddress>
+        <DhcpEndIPAddress>10.0.255.254</DhcpEndIPAddress>
+        <DhcpLeaseTime>86400</DhcpLeaseTime>
+        <DnsStatus>0</DnsStatus>
+        <PrimaryDns>MY_PRIMARY_DNS</PrimaryDns>
+        <SecondaryDns>MY_SECONDARY_DNS</SecondaryDns>
+        <GuestIPAddress>10.255.0.1</GuestIPAddress>
+        <GuestStartIP>10.255.0.1</GuestStartIP>
+        <GuestEndIP>10.255.0.254</GuestEndIP>
+    </request>
+</xml>

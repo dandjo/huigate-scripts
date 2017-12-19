@@ -1,0 +1,11 @@
+<xml>
+    <uri>/api/dhcp/static-dns-info</uri>
+    <request>
+        <dnss>
+            <dns>
+                <domain>my_machine.local</domain>
+                <ipaddress>MY_IP_ADDRESS</ipaddress>
+            </dns>
+        </dnss>
+    </request>
+</xml>

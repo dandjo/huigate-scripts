@@ -1,0 +1,29 @@
+<xml>
+    <uri>/api/dialup/profiles</uri>
+    <request>
+        <CurrentProfile>1</CurrentProfile>
+        <Profiles>
+            <Profile>
+                <Index>1</Index>
+                <IsValid>1</IsValid>
+                <Name>3</Name>
+                <ApnIsStatic>1</ApnIsStatic>
+                <ApnName>drei.at</ApnName>
+                <DialupNum>*99#</DialupNum>
+                <Username />
+                <Password />
+                <AuthMode>2</AuthMode>
+                <IpIsStatic>0</IpIsStatic>
+                <IpAddress />
+                <Ipv6Address />
+                <DnsIsStatic>0</DnsIsStatic>
+                <PrimaryDns />
+                <SecondaryDns />
+                <PrimaryIpv6Dns />
+                <SecondaryIpv6Dns />
+                <ReadOnly>1</ReadOnly>
+                <iptype>0</iptype>
+            </Profile>
+        </Profiles>
+    </request>
+</xml>

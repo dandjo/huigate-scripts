@@ -1,0 +1,6 @@
+<xml>
+    <uri>/api/user/logout</uri>
+    <request>
+        <Logout>1</Logout>
+    </request>
+</xml>

@@ -1,0 +1,6 @@
+<xml>
+    <uri>/api/device/control</uri>
+    <request>
+        <Control>1</Control>
+    </request>
+</xml>

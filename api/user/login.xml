@@ -1,0 +1,8 @@
+<xml>
+    <uri>/api/user/login</uri>
+    <request>
+        <Username>%s</Username>
+        <Password>%s</Password>
+        <password_type>4</password_type>
+    </request>
+</xml>

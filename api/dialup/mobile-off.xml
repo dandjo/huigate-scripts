@@ -1,0 +1,6 @@
+<xml>
+    <uri>/api/dialup/mobile-dataswitch</uri>
+    <request>
+        <dataswitch>0</dataswitch>
+    </request>
+</xml>

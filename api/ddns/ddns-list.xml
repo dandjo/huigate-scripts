@@ -1,0 +1,15 @@
+<xml>
+    <uri>/api/ddns/ddns-list</uri>
+    <request>
+        <ddnss>
+            <ddns>
+                <index>0</index>
+                <provider>DynDNS.org</provider>
+                <status>1</status>
+                <domainname>MY_DOMAIN.dyndns.org</domainname>
+                <username>MY_USERNAME</username>
+                <password>MY_PASSWORD</password>
+            </ddns>
+        </ddnss>
+    </request>
+</xml>

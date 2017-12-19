@@ -1,0 +1,12 @@
+<xml>
+    <uri>/api/dhcp/static-addr-info</uri>
+    <request>
+        <Hosts>
+            <Host>
+                <HostEnabled>1</HostEnabled>
+                <HostHw>MY_MAC_ADDRESS</HostHw>
+                <HostIp>MY_HOST_IP</HostIp>
+            </Host>
+        </Hosts>
+    </request>
+</xml>
