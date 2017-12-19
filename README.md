@@ -50,3 +50,7 @@ The post executable calls the api with given xml file. It creates a post
 request to the **uri** defined in the xml. The payload is defined as childs
 of the **request** node in the xml.
 
+## Disclaimer
+
+Be careful with post requests. If you do not know what you do, keep your
+fingers crossed. Do not abuse these scripts for hijacking routers.
