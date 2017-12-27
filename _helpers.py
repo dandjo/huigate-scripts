@@ -16,7 +16,7 @@ def login(sess):
         pat = re.compile(r".*meta name=\"csrf_token\" content=\"(.*)\"", re.I)
         matches = (pat.match(line) for line in html.splitlines())
         return [m.group(1) for m in matches if m][1]
-    csrf_token = grep_csrf(sess.get('http://homerouter.cpe/home/home.html').text)
+    csrf_token = grep_csrf(sess.get(parse_conf()['baseuri'] + '/home/home.html').text)
     sess.headers['Accept-Language'] = 'en-US'
     sess.headers['Content-Type'] = 'application/x-www-form-urlencoded'
     sess.headers['X-Requested-With'] = 'XMLHttpRequest'
@@ -30,9 +30,8 @@ def login(sess):
     password_hash = encrypt(username + encrypt(password) + csrf_token)
 
     root = _parse_xml_root('api/user/login.xml')
-    resp = sess.post(
-            'http://homerouter.cpe' + root.find('uri').text,
-            data=ET.tostring(root.find('request')) % (username, password_hash))
+    resp = sess.post(parse_conf()['baseuri'] + root.find('uri').text,
+                     data=ET.tostring(root.find('request')) % (username, password_hash))
     sess.headers.update({'__RequestVerificationToken': resp.headers["__requestverificationtokenone"]})
     return resp
 
@@ -43,13 +42,18 @@ def logout(sess):
 
 def post(sess, xml_file):
     root = _parse_xml_root(xml_file)
-    return sess.post('http://homerouter.cpe' + root.find('uri').text,
+    return sess.post(parse_conf()['baseuri'] + root.find('uri').text,
                      data=ET.tostring(root.find('request')))
 
 
 def get(sess, xml_file):
     root = _parse_xml_root(xml_file)
-    return sess.get('http://homerouter.cpe' +  root.find('uri').text)
+    return sess.get(parse_conf()['baseuri'] +  root.find('uri').text)
+
+
+def parse_conf():
+    root = _parse_xml_root('config.xml')
+    return {'baseuri': root.find('baseuri').text}
 
 
 def parse_response(resp):

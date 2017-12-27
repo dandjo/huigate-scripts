@@ -9,6 +9,7 @@ import sys
 import time
 from lxml import objectify
 from datetime import datetime
+from _helpers import parse_conf
 
 
 def avg(vals):
@@ -22,7 +23,7 @@ def parse_int(val):
 
 
 def login(sess):
-    sess.get('http://homerouter.cpe/home/home.html')
+    sess.get(parse_conf()['baseuri'] + '/home/home.html')
 
 
 def calc_rsrq_level(rsrq):
@@ -61,7 +62,7 @@ with requests.Session() as sess:
     iterations = 0
     while True:
         try:
-            resp = sess.get('http://homerouter.cpe/api/device/signal')
+            resp = sess.get(parse_conf()['baseuri'] + '/api/device/signal')
             x = objectify.fromstring(resp.text.decode('utf-8').encode('ascii'))
             if x.tag == 'error' and hasattr(x, 'code') and x.code == '125002':
                 time.sleep(1)
