@@ -1,0 +1,44 @@
+<xml>
+    <uri>/api/security/virtual-servers</uri>
+    <request>
+        <Servers>
+            <Server>
+                <VirtualServerIPName>SSH</VirtualServerIPName>
+                <VirtualServerStatus>1</VirtualServerStatus>
+                <VirtualServerRemoteIP></VirtualServerRemoteIP>
+                <VirtualServerWanPort>22</VirtualServerWanPort>
+                <VirtualServerWanEndPort></VirtualServerWanEndPort>
+                <VirtualServerLanPort>22</VirtualServerLanPort>
+                <VirtualServerIPAddress>DESTINATION_IP</VirtualServerIPAddress>
+                <VirtualServerProtocol>6</VirtualServerProtocol>
+            </Server>
+            <Server>
+                <VirtualServerIPName>HTTP</VirtualServerIPName>
+                <VirtualServerStatus>1</VirtualServerStatus>
+                <VirtualServerRemoteIP></VirtualServerRemoteIP>
+                <VirtualServerWanPort>80</VirtualServerWanPort>
+                <VirtualServerWanEndPort></VirtualServerWanEndPort>
+                <VirtualServerLanPort>80</VirtualServerLanPort>
+                <VirtualServerIPAddress>DESTINATION_IP</VirtualServerIPAddress>
+                <VirtualServerProtocol>6</VirtualServerProtocol>
+            </Server>
+            <Server>
+                <VirtualServerIPName>VPN</VirtualServerIPName>
+                <VirtualServerStatus>1</VirtualServerStatus>
+                <VirtualServerRemoteIP></VirtualServerRemoteIP>
+                <VirtualServerWanPort>2294</VirtualServerWanPort>
+                <VirtualServerWanEndPort></VirtualServerWanEndPort>
+                <VirtualServerLanPort>1194</VirtualServerLanPort>
+                <VirtualServerIPAddress>DESTINATION_IP</VirtualServerIPAddress>
+                <VirtualServerProtocol>17</VirtualServerProtocol>
+            </Server>
+        </Servers>
+    </request>
+</xml>
+
+<!--
+    VirtualServerProtocol
+    #####################
+    6 - TCP
+    17 - UPP
+-->

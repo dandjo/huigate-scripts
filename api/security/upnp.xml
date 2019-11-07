@@ -1,0 +1,6 @@
+<xml>
+    <uri>/api/security/upnp</uri>
+    <request>
+        <UpnpStatus>1</UpnpStatus>
+    </request>
+</xml>
